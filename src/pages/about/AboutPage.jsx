@@ -47,16 +47,19 @@ const projects = [
   },
   {
     title: "내 주변 공고 검색",
+    to: "/projects/apt-map",
     text: "위치 기반 검색과 필터링으로 빠르고 정확한 탐색 제공",
     image: selectProject02,
   },
   {
     title: "아파트잡 핵심 리뉴얼",
+    to: "/projects/apt-renew",
     text: "정보 구조 재설계와 디자인 시스템 적용으로 사용성 개선",
     image: selectProject03,
   },
   {
     title: "영업 실적 CTI 대시보드",
+    to: "/projects/cti",
     text: "실시간 데이터 시각화와 운영 효율을 높이는 대시보드 구축",
     image: selectProject04,
   },
