@@ -1,0 +1,17 @@
+/* 공통 색상 */
+:root {
+  --portfolio-primary: #4053e8;
+  --portfolio-bg: #ffffff;
+  --portfolio-surface: #ebf2fc;
+  --portfolio-text: #222222;
+  --portfolio-muted: #666666;
+  --portfolio-border: #cccccc;
+}
+
+[data-bs-theme="dark"] {
+  --portfolio-bg: #15171c;
+  --portfolio-surface: #222631;
+  --portfolio-text: #f3f4f6;
+  --portfolio-muted: #b5bac5;
+  --portfolio-border: #444955;
+}

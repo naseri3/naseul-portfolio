@@ -1,0 +1,41 @@
+/* 기본 화면 스타일 */
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Malgun Gothic", sans-serif;
+  background-color: var(--portfolio-bg);
+  color: var(--portfolio-text);
+  line-height: 1.6;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 시안 기준: 본문 최대 1280px + 좌우 여백 */
+.portfolio-container {
+  width: 100%;
+  max-width: 1328px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
