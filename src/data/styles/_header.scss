@@ -1,0 +1,35 @@
+
+/* Every route uses the same header and full-screen mobile dialog. */
+.site-header {
+    --home-bg: #fff;
+    --home-text: #111;
+    --home-muted: #555;
+    --home-line: #c8c8c8;
+    --home-accent: #4053e8;
+    background: var(--home-bg);
+    color: var(--home-text);
+
+    .home-header__inner { min-height: 79px; }
+    a { text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #7184ff; outline-offset: 5px; }
+}
+[data-bs-theme="dark"] .site-header {
+    --home-bg: #122022;
+    --home-text: #f8f9fa;
+    --home-muted: #d5d8da;
+    --home-line: #9aa3a4;
+}
+@media (max-width: 767.98px) {
+    .site-header {
+        .home-header__inner { min-height: 77px; }
+        .home-logo { font-size: 20px; letter-spacing: -.5px; }
+        .home-logo sup { font-size: 10px; top: -.35em; }
+        .home-header__controls { gap: 5px; }
+        .home-theme-toggle { width: 40px; min-width: 40px; height: 40px; padding: 7px; }
+        .home-theme-toggle img { width: 27px; height: 27px; object-fit: contain; }
+        .home-theme-toggle span { display: none; }
+        .home-menu-toggle { width: 44px; height: 44px; padding: 7px; }
+        .home-menu-toggle img { width: 30px; height: 30px; object-fit: contain; }
+    }
+}

@@ -1,2 +1,19 @@
 @use "./theme";
 @use "./base";
+@use "./pages/home";
+@use "./pages/about";
+@use "./header";
+@use "./pages/projects";
+@use "./pages/project-detail";
+
+.portfolio-arrow {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.home-action--outline .portfolio-arrow {
+    position: absolute;
+    right: 14px;
+}
+
