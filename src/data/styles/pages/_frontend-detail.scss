@@ -35,6 +35,9 @@
         color: #8fa0ff;
     }
 }
+[data-bs-theme="dark"] .frontend-case .case-metadata > div:last-child dd {
+    color: #c8d2ff;
+}
 .frontend-case--todo .case-hero h1,
 .frontend-case--map .case-hero h1 {
     margin-bottom: 14px;
