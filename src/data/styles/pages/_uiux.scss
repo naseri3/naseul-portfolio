@@ -1,0 +1,279 @@
+.uiux-page {
+    --uiux-background: #fff;
+    --uiux-text: #050505;
+    --uiux-muted: #555;
+    min-height: calc(100dvh - 80px);
+    padding-bottom: 48px;
+    color: var(--uiux-text);
+    background: var(--uiux-background) url("../../../assets/images/common/index_BG-light.png") left top / 1060px auto
+        no-repeat;
+    :focus-visible {
+        outline: 3px solid #4053ff;
+        outline-offset: 4px;
+    }
+}
+[data-bs-theme="dark"] .uiux-page {
+    --uiux-background: #122022;
+    --uiux-text: #fff;
+    --uiux-muted: #d5d8da;
+    background-image: url("../../../assets/images/common/index_BG-dark.png");
+}
+.uiux-intro {
+    padding: 50px 0;
+    text-align: center;
+    h1 {
+        margin: 18px 0 12px;
+        font-size: 40px;
+        line-height: 1.45;
+        font-weight: 700;
+        letter-spacing: -1.2px;
+    }
+}
+.uiux-eyebrow,
+.uiux-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    min-height: 30px;
+    margin: 0 auto;
+    border-radius: 99px;
+    color: #4053ff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.uiux-eyebrow {
+    background: #eaf4f9;
+}
+.uiux-count {
+    margin-top: 18px;
+    border: 1px solid #4053ff;
+    background: #fff;
+}
+.uiux-intro__description {
+    margin: 0;
+    color: var(--uiux-muted);
+    font-size: 20px;
+    line-height: 1.6;
+}
+.uiux-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+.uiux-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 292px;
+    padding: 11px 15px 13px;
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    background: #fff;
+    color: #080808;
+    h2 {
+        margin: 7px 0 2px;
+        font-size: 24px;
+        line-height: 1.4;
+        font-weight: 600;
+    }
+}
+.uiux-card__visual {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+}
+.uiux-card__number {
+    color: #4053ff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.uiux-card__image {
+    width: 78%;
+    aspect-ratio: 298 / 146;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+.uiux-card__category {
+    margin: 0 0 3px;
+    color: #4053ff;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.uiux-card__description {
+    margin: 0 48px 9px 0;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.25;
+}
+.uiux-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    margin: auto 44px 0 0;
+    padding: 0;
+    list-style: none;
+    li {
+        padding: 1px 9px;
+        border-radius: 99px;
+        background: #e6ecf3;
+        color: #555;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+.uiux-card__open {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 5px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        border: 1px solid #c8c8c8;
+        border-radius: inherit;
+    }
+    img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+    }
+}
+.uiux-upcoming {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 292px;
+    padding: 30px 20px;
+    border: 1px dashed #c8c8c8;
+    border-radius: 10px;
+    background: #fff;
+    color: #222;
+    text-align: center;
+    h2 {
+        margin: 18px 0 5px;
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 600;
+    }
+    p {
+        margin: 0;
+        color: #777;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+.uiux-upcoming__icon {
+    width: 66px;
+    height: 66px;
+    object-fit: contain;
+}
+.uiux-preview {
+    width: min(820px, calc(100% - 32px));
+    max-height: 85dvh;
+    padding: 24px;
+    overflow: auto;
+    border: 1px solid #c8c8c8;
+    border-radius: 12px;
+    background: #fff;
+    color: #111;
+    &::backdrop {
+        background: #071013b3;
+    }
+    > img {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 6px;
+    }
+    > p:last-child {
+        margin-bottom: 0;
+    }
+}
+.uiux-preview__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+    h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+    button {
+        width: 44px;
+        height: 44px;
+        border: 0;
+        border-radius: 50%;
+        background: #edf1f7;
+        color: #111;
+        font-size: 28px;
+    }
+}
+@media (max-width: 1099.98px) {
+    .uiux-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .uiux-intro h1 {
+        font-size: 34px;
+    }
+}
+@media (max-width: 639.98px) {
+    .uiux-page {
+        background-size: 760px auto;
+        padding-bottom: 32px;
+    }
+    .uiux-intro {
+        padding: 36px 0;
+    }
+    .uiux-intro h1 {
+        font-size: 28px;
+        letter-spacing: -0.8px;
+    }
+    .uiux-intro__description {
+        font-size: 16px;
+    }
+    .uiux-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+    .uiux-card {
+        min-height: 292px;
+    }
+    .uiux-card__description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    .uiux-card__tags {
+        gap: 6px;
+    }
+    .uiux-upcoming {
+        min-height: 250px;
+    }
+}
+
+/* One native link makes the complete card keyboard and pointer accessible. */
+a.uiux-card {
+  text-decoration: none;
+  color: #080808;
+  cursor: pointer;
+}
+.uiux-detail { padding-top: 28px; }
+.uiux-detail__back { display: inline-block; color: var(--uiux-text); padding-block: 8px; }
+.uiux-detail__back:hover { text-decoration: underline; }
+.uiux-detail .uiux-intro { padding: 32px 0; }
+.uiux-detail__image { width: 100%; max-width: 1000px; margin-inline: auto; border: 1px solid #c8c8c8; border-radius: 10px; }
+.uiux-detail__tags { justify-content: center; margin: 24px 0 0; }

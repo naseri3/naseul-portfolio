@@ -1,3 +1,5 @@
+@use "./pages/uiux";
+@use "./pages/uiux-detail";
 @use "./theme";
 @use "./base";
 @use "./pages/home";
@@ -16,4 +18,3 @@
     position: absolute;
     right: 14px;
 }
-

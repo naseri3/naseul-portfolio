@@ -3,6 +3,7 @@ import SiteHeader from "./components/SiteHeader";
 import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
 import ProjectsPage from "./pages/projects/ProjectsPage";
+import UiuxPage, { UiuxDetailPage } from "./pages/uiux/UiuxPage";
 import ProjectDetailPage from "./pages/projects/ProjectDetailPage";
 import AptMapPage from "./pages/projects/AptMapPage";
 import AptRenewPage from "./pages/projects/AptRenewPage";
@@ -40,7 +41,8 @@ export default function App() {
       <Route path="/projects/guide" element={<GuidePage />} />
       <Route path="/projects/promotion" element={<PromotionPage />} />
       <Route path="/projects/editor" element={<EditorPage />} />
-      <Route path="/uiux" element={<ComingSoon title="UI/UX Portfolio" />} />
+      <Route path="/uiux" element={<UiuxPage />} />
+      <Route path="/uiux/:projectId" element={<UiuxDetailPage />} />
       <Route
         path="/frontend"
         element={<ComingSoon title="Front-End Portfolio" />}
