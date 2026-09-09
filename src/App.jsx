@@ -1,5 +1,9 @@
 import { Link, Route, Routes } from "react-router";
 import SiteHeader from "./components/SiteHeader";
+import FrontendPage from "./pages/frontend/FrontendPage";
+import AptJobFrontendPage from "./pages/frontend/AptJobFrontendPage";
+import TodoFrontendPage from "./pages/frontend/TodoFrontendPage";
+import AptMapFrontendPage from "./pages/frontend/AptMapFrontendPage";
 import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
 import ProjectsPage from "./pages/projects/ProjectsPage";
@@ -43,9 +47,12 @@ export default function App() {
       <Route path="/projects/editor" element={<EditorPage />} />
       <Route path="/uiux" element={<UiuxPage />} />
       <Route path="/uiux/:projectId" element={<UiuxDetailPage />} />
+      <Route path="/frontend/apt-job" element={<AptJobFrontendPage />} />
+      <Route path="/frontend/todo-list" element={<TodoFrontendPage />} />
+      <Route path="/frontend/apt-map" element={<AptMapFrontendPage />} />
       <Route
         path="/frontend"
-        element={<ComingSoon title="Front-End Portfolio" />}
+        element={<FrontendPage />}
       />
       <Route
         path="*"
