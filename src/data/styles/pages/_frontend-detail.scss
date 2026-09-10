@@ -31,8 +31,10 @@
         color: #c8d2ff;
     }
 
+}
+[data-bs-theme="dark"] .frontend-case {
     .case-metadata > div:last-child dd {
-        color: #8fa0ff;
+        color: #c8d2ff;
     }
 }
 [data-bs-theme="dark"] .frontend-case .case-metadata > div:last-child dd {

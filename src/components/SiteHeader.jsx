@@ -3,7 +3,14 @@ import { Link, useLocation } from "react-router";
 import darkModeIcon from "../assets/icons/dark-mode.png";
 import lightModeIcon from "../assets/icons/light-mode.png";
 import mobileMenuIcon from "../assets/icons/mobile-menu.png";
-import Icon from "./Icon";
+import lightAboutIcon from "../assets/icons/menu/light-about.png";
+import darkAboutIcon from "../assets/icons/menu/dark-about.png";
+import lightProjectIcon from "../assets/icons/menu/light-project.png";
+import darkProjectIcon from "../assets/icons/menu/dark-project.png";
+import lightUiuxIcon from "../assets/icons/menu/light-uiux.png";
+import darkUiuxIcon from "../assets/icons/menu/dark-uiux.png";
+import lightFrontIcon from "../assets/icons/menu/light-front.png";
+import darkFrontIcon from "../assets/icons/menu/dark-front.png";
 import ActionButtons from "./ActionButtons";
 
 export default function SiteHeader() {
@@ -79,6 +86,7 @@ export default function SiteHeader() {
           <div className="home-header__controls">
             <nav className="home-desktop-nav" aria-label="주요 메뉴">
               <Link to="/about">About</Link>
+              <Link to="/projects">Project</Link>
               <Link to="/uiux">UI/UX</Link>
               <Link to="/frontend">Front-End</Link>
             </nav>
@@ -138,15 +146,19 @@ export default function SiteHeader() {
             </div>
             <nav className="mobile-menu-panel__nav" aria-label="주요 메뉴">
               <Link to="/about" onClick={() => setMenuOpen(false)}>
-                <span className="mobile-menu-panel__icon"><Icon name="person" /></span>
+                <span className="mobile-menu-panel__icon"><img src={isDark ? darkAboutIcon : lightAboutIcon} alt="" width="28" height="28" /></span>
                 About
               </Link>
+              <Link to="/projects" onClick={() => setMenuOpen(false)}>
+                <span className="mobile-menu-panel__icon"><img src={isDark ? darkProjectIcon : lightProjectIcon} alt="" width="28" height="28" /></span>
+                Project
+              </Link>
               <Link to="/uiux" onClick={() => setMenuOpen(false)}>
-                <span className="mobile-menu-panel__icon"><Icon name="pen" /></span>
+                <span className="mobile-menu-panel__icon"><img src={isDark ? darkUiuxIcon : lightUiuxIcon} alt="" width="28" height="28" /></span>
                 UIUX
               </Link>
               <Link to="/frontend" onClick={() => setMenuOpen(false)}>
-                <span className="mobile-menu-panel__icon"><Icon name="code" /></span>
+                <span className="mobile-menu-panel__icon"><img src={isDark ? darkFrontIcon : lightFrontIcon} alt="" width="28" height="28" /></span>
                 Front-End
               </Link>
             </nav>
